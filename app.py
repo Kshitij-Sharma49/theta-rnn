@@ -3,6 +3,7 @@ import json
 import csv
 import os
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 # from flask_restful import Api, Resource, reqparse, abort, fields, marshal_with
 import re
 import pandas as pd
@@ -16,6 +17,7 @@ from keras.models import load_model
 
 
 app = Flask(__name__)
+CORS(app)
 # api = Api(app)
 
 
